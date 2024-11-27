@@ -15,10 +15,9 @@ html {
   /* Quality Products: фоновая картинка карточек */
   --quality-products__card-icon-bg-width: 63px;
   --quality-products__card-icon-bg-height: 54px;
-
-  /* 
-  --color-active: #545050;
-   */
+  /* Quality Products: фоновая картинка карточек */
+  --quality-products__card-icon-width: 37px;
+  --quality-products__card-icon-height: 37px;
 
   /* размеры фото списка карточек городов */
   /* --thumbnail-width: 194px;
@@ -77,7 +76,7 @@ ol {
   justify-content: space-between;
   align-items: center;
   /* padding: 31px 178px 12px; */
-  padding: 31px 176px 13px;
+  padding: 31px 176px 12px;
   /* border: 1px solid red; */
 }
 
@@ -232,17 +231,18 @@ ol {
 
 /************* QUALITY PRODUCTS  *************/
 
-.quality-products {
-  padding-top: 159px;
+.quality-products-list {
+  padding-top: 160px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
 }
 
 .quality-products__card {
   position: relative;
   /* border: 1px solid navy; */
-  width: var(--quality-products__card-width);
+  /* width: var(--quality-products__card-width); */
   /* height: 241px; */
   background: var(--color-light);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -251,10 +251,19 @@ ol {
 
 .quality-products__card-icon {
   position: absolute;
-  top: -22px;
+  /* top: -22px;
   left: 161px;
   width: 37px;
-  height: 37px;
+  height: 37px; */
+
+  left: calc(
+    var(--quality-products__card-width) / 2 -
+      var(--quality-products__card-icon-width) / 2
+  );
+  top: calc(-1 * (var(--quality-products__card-icon-height) / 2) - 3px);
+  width: var(--quality-products__card-icon-width);
+  height: var(--quality-products__card-icon-height);
+  mix-blend-mode: darken;
 }
 
 .quality-products__card-icon-bg {
@@ -265,8 +274,7 @@ ol {
     var(--quality-products__card-width) / 2 -
       var(--quality-products__card-icon-bg-width) / 2
   );
-  top: calc(0 - (var(--quality-products__card-icon-bg-height) / 2));
-  /* object-position: 50% 50%; */
+  top: calc(-1 * (var(--quality-products__card-icon-bg-height) / 2) - 3px);
   width: var(--quality-products__card-icon-bg-width);
   height: var(--quality-products__card-icon-bg-height);
 }
@@ -277,7 +285,9 @@ ol {
 }
 
 .quality-products__card-link {
-  display: flex;
+  /* display: flex; */
+  display: block;
+  width: var(--quality-products__card-width);
   flex-direction: column;
   padding: 40px 25px 21px;
   text-decoration: none;
@@ -292,17 +302,137 @@ ol {
 }
 
 .quality-products__card-text {
-  padding: 11px 0 24px;
+  padding: 11px 0 25px;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
 }
 
-.quality-products__card-text-link {
+.card-link {
   color: var(--color-accent);
   text-decoration: none;
   /* cursor: pointer; */
+}
+
+/************* POPULAR PRODUCTS *************/
+
+.pop-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 117px auto 0;
+}
+
+.pop-products__title {
+  font-family: "Poppins";
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 32.25px;
+  /* line-height: 48px; */
+  text-align: center;
+  color: var(--color-default);
+}
+
+.pop-products__text {
+  padding-top: 12px;
+  padding-bottom: 42px;
+  width: 507px;
+  font-family: "Roboto";
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-default);
+  opacity: 0.6;
+}
+
+/* Блок больших карточек */
+
+.pop-products__big-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: column; */
+  gap: 30px;
+  /* border: 1px solid navy; */
+}
+
+.pop-products__big-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 555px;
+  /* border: 1px solid red; */
+}
+
+.pop-products__big-card-photo {
+  mix-blend-mode: darken;
+}
+
+.pop-products__big-card-photo-link {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  border-radius: 20px;
+  background-color: #fcf2eb;
+}
+
+.pop-products__big-card-title {
+  padding-top: 27px;
+  padding-bottom: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  color: var(--color-default);
+}
+
+/* Блок маленьких карточек */
+
+.pop-products__small-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 33px;
+  /* flex-direction: column; */
+  gap: 30px;
+  /* border: 1px solid navy; */
+}
+
+.pop-products__small-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  /* border: 1px solid red; */
+}
+
+.pop-products__small-card-photo {
+  mix-blend-mode: darken;
+}
+
+.pop-products__small-card-photo-link {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 272px;
+  border-radius: 10px;
+  background-color: #fcf2eb;
+}
+
+.pop-products__small-card-title {
+  padding-top: 22px;
+  padding-bottom: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-default);
 }
 
 /************* ОБЩИЕ СТИЛИ КНОПОК *************/
