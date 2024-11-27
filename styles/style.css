@@ -10,6 +10,12 @@ html {
   --color-default: #170c04;
   --color-accent: #e27b3a;
   --color-dark: #000;
+  /* Quality Products: Ширина карточек */
+  --quality-products__card-width: 360px;
+  /* Quality Products: фоновая картинка карточек */
+  --quality-products__card-icon-bg-width: 63px;
+  --quality-products__card-icon-bg-height: 54px;
+
   /* 
   --color-active: #545050;
    */
@@ -30,7 +36,7 @@ html {
   background-color: var(--color-light);
   inline-size: 1500px;
   block-size: 100%;
-  border: 1px solid navy;
+  /* border: 1px solid navy; */
   margin: 0 auto; /* ??? */
   position: relative; /* для позиционирования фонового рисунка */
 }
@@ -71,7 +77,7 @@ ol {
   justify-content: space-between;
   align-items: center;
   /* padding: 31px 178px 12px; */
-  padding: 31px 176px 12px;
+  padding: 31px 176px 13px;
   /* border: 1px solid red; */
 }
 
@@ -89,14 +95,14 @@ ol {
 }
 
 .header__logo-text {
-  padding-left: 5px;
+  padding-left: 7px;
   font-weight: 500;
   font-size: 22px;
   color: var(--color-dark);
 }
 
 .header__menu {
-  padding-left: 56px;
+  padding-left: 60px;
   /* border: 1px solid green; */
 }
 
@@ -121,17 +127,18 @@ ol {
 .header__toolbar-list {
   display: flex;
   /* flex-direction: row; */
+  align-items: center;
   gap: 40px;
   list-style: none;
   /* border: 1px solid brown; */
 }
 
-.content {
-  /* display: grid;
+/* .content {
+  display: grid;
   align-items: end;
   gap: 30px;
-  grid-template: 1fr / 711px 399px; */
-}
+  grid-template: 1fr / 711px 399px;
+} */
 
 /************* INTRO *************/
 
@@ -140,28 +147,31 @@ ol {
 
   padding-left: 170px;
   display: flex;
+  align-items: center;
   /* flex-direction: column; */
   /* justify-content: center; */
   /* border: 1px solid red; */
 }
 
 .intro__left-block {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* border: 1px solid green; */
 }
 
 .intro__background-image {
   position: absolute;
-  
+  /* margin: 0; */
   top: 0;
-  right: 0;
+  right: -14px; /* выравнивание трапеции  по правому краю */
   width: 559px;
   height: 693px;
   /* background-image: url(../images/trapezoid.svg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 525px auto; */
+  /* border: 1px solid green; */
 }
 
 .intro__puppy-image {
@@ -187,7 +197,7 @@ ol {
   font-weight: 700;
   font-size: 100px;
   line-height: 120%;
-  padding-top: 136px;
+  /* padding-top: 136px; */
   padding-bottom: 49px;
   width: 522px;
 }
@@ -206,17 +216,93 @@ ol {
 .button {
   border-radius: 24px;
   background-color: transparent;
-  padding: 12px 28px;
+  padding: 11px 28px;
   font-family: inherit; /* 'Roboto' 400 */
   font-size: 16px;
   line-height: 150%;
   color: var(--color-accent);
-  border: 1px solid navy;
+  border: 1px solid var(--color-accent);
 }
 
 .button_accent {
   background-color: var(--color-accent);
   color: var(--color-light);
+  border: 1px solid transparent;
+}
+
+/************* QUALITY PRODUCTS  *************/
+
+.quality-products {
+  padding-top: 159px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.quality-products__card {
+  position: relative;
+  /* border: 1px solid navy; */
+  width: var(--quality-products__card-width);
+  /* height: 241px; */
+  background: var(--color-light);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.quality-products__card-icon {
+  position: absolute;
+  top: -22px;
+  left: 161px;
+  width: 37px;
+  height: 37px;
+}
+
+.quality-products__card-icon-bg {
+  position: absolute;
+  /* top: -25px; */
+  /* left: 150px; */
+  left: calc(
+    var(--quality-products__card-width) / 2 -
+      var(--quality-products__card-icon-bg-width) / 2
+  );
+  top: calc(0 - (var(--quality-products__card-icon-bg-height) / 2));
+  /* object-position: 50% 50%; */
+  width: var(--quality-products__card-icon-bg-width);
+  height: var(--quality-products__card-icon-bg-height);
+}
+
+.quality-products__card_accent {
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 15px 5px rgba(226, 123, 58, 0.15);
+}
+
+.quality-products__card-link {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 25px 21px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-default);
+}
+
+.quality-products__card-title {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.quality-products__card-text {
+  padding: 11px 0 24px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.quality-products__card-text-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  /* cursor: pointer; */
 }
 
 /************* ОБЩИЕ СТИЛИ КНОПОК *************/
