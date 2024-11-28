@@ -9,6 +9,12 @@ html {
   --color-light: #fff;
   --color-default: #170c04;
   --color-accent: #e27b3a;
+  --color-accent-translucent: rgba(
+    226,
+    123,
+    58,
+    0.15
+  ); /* #e27b3a + opacity 15% */
   --color-dark: #000;
   /* Quality Products: Ширина карточек */
   --quality-products__card-width: 360px;
@@ -201,34 +207,6 @@ ol {
   width: 522px;
 }
 
-/* Панель с кнопками */
-.intro__button-panel {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: start; */
-  /* justify-content: center; */
-  align-items: center;
-  gap: 20px;
-  /* border: 1px solid brown; */
-}
-
-.button {
-  border-radius: 24px;
-  background-color: transparent;
-  padding: 11px 28px;
-  font-family: inherit; /* 'Roboto' 400 */
-  font-size: 16px;
-  line-height: 150%;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-}
-
-.button_accent {
-  background-color: var(--color-accent);
-  color: var(--color-light);
-  border: 1px solid transparent;
-}
-
 /************* QUALITY PRODUCTS  *************/
 
 .quality-products-list {
@@ -315,42 +293,25 @@ ol {
   /* cursor: pointer; */
 }
 
-/************* POPULAR PRODUCTS *************/
+/************* PRODUCTS *************/
 
-.pop-products {
+.products {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 117px auto 0;
 }
 
-.pop-products__title {
-  font-family: "Poppins";
-  /* font-style: normal; */
-  font-weight: 500;
-  font-size: 32.25px;
-  /* line-height: 48px; */
-  text-align: center;
-  color: var(--color-default);
-}
-
-.pop-products__text {
+.products__text {
   padding-top: 12px;
   padding-bottom: 42px;
   width: 507px;
-  font-family: "Roboto";
-  /* font-style: normal; */
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
   text-align: center;
-  color: var(--color-default);
-  opacity: 0.6;
 }
 
 /* Блок больших карточек */
 
-.pop-products__big-cards-list {
+.products__big-cards-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -359,7 +320,7 @@ ol {
   /* border: 1px solid navy; */
 }
 
-.pop-products__big-card {
+.products__big-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -367,11 +328,11 @@ ol {
   /* border: 1px solid red; */
 }
 
-.pop-products__big-card-photo {
+.products__big-card-photo {
   mix-blend-mode: darken;
 }
 
-.pop-products__big-card-photo-link {
+.products__big-card-photo-link {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -381,7 +342,7 @@ ol {
   background-color: #fcf2eb;
 }
 
-.pop-products__big-card-title {
+.products__big-card-title {
   padding-top: 27px;
   padding-bottom: 10px;
   font-family: "Poppins";
@@ -393,17 +354,18 @@ ol {
 
 /* Блок маленьких карточек */
 
-.pop-products__small-cards-list {
+.products__small-cards-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 33px;
+  padding-top: 66px;
+  padding-bottom: 46px;
   /* flex-direction: column; */
   gap: 30px;
   /* border: 1px solid navy; */
 }
 
-.pop-products__small-card {
+.products__small-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,11 +373,11 @@ ol {
   /* border: 1px solid red; */
 }
 
-.pop-products__small-card-photo {
+.products__small-card-photo {
   mix-blend-mode: darken;
 }
 
-.pop-products__small-card-photo-link {
+.products__small-card-photo-link {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -425,7 +387,7 @@ ol {
   background-color: #fcf2eb;
 }
 
-.pop-products__small-card-title {
+.products__small-card-title {
   padding-top: 22px;
   padding-bottom: 10px;
   font-family: "Poppins";
@@ -435,7 +397,145 @@ ol {
   color: var(--color-default);
 }
 
-/************* ОБЩИЕ СТИЛИ КНОПОК *************/
+/*************  ОБЩИЕ СТИЛИ *************/
+
+/* Панель с кнопками */
+.button-panel {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: start; */
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+  /* border: 1px solid brown; */
+}
+
+.button {
+  border-radius: 24px;
+  background-color: transparent;
+  padding: 11px 28px;
+  font-family: inherit; /* 'Roboto' 400 */
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent-translucent);
+  cursor: pointer;
+}
+
+.button_accent {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border: 1px solid transparent;
+}
+
+.button_rectangular {
+  border-radius: 4px;
+}
+
+.section-title {
+  font-family: "Poppins";
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 32.25px;
+  /* line-height: 48px; */
+  text-align: center;
+  color: var(--color-default);
+}
+
+.description-translucent-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-default);
+  opacity: 0.6;
+}
+
+/************* DOG CARE *************/
+
+.dog-care {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin: 79px 125px 0;
+  /* border: 1px solid red; */
+}
+
+.dog-care__photo {
+  padding: 44px 24px 41px 26px;
+  /* border: 1px solid blue; */
+}
+
+.dog-care__description {
+  width: 487px;
+  /* border: 1px solid green; */
+}
+
+.title-link {
+  font-family: "Roboto";
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 16px;
+  /* line-height: 19px; */
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent); /*#e27b3a;*/
+}
+
+.dog-care__title {
+  padding: 4px 0 13px;
+  text-align: left;
+  line-height: 140%;
+  color: var(--color-default);
+}
+
+.button-panel-dog-care {
+  padding-top: 38px;
+}
+
+/************* SUBSCRIBTION *************/
+
+.subscribtion {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 70px 180px 0;
+}
+
+.section-title_subscribtion {
+  width: 474px;
+  text-align: center;
+  line-height: 140%;
+  padding-bottom: 38px;
+}
+
+/* Лист карточек */
+.subscribtion__cards-list {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 30px;
+
+  /* margin-top: 70px; */
+}
+.subscribtion__card {
+  display: flex;
+  flex-direction: column;  
+  /* justify-content: center; */
+  align-items: center;
+  width: 360px;
+}
+
+.subscribtion__card-icon {
+  width: 307px;
+  height: 264px;
+}
+
+/* pop-products__title subscribtion__card-title*/
 
 /*.button {
   min-height: 34px;

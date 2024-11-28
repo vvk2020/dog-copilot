@@ -38,11 +38,11 @@
       <nav class="header__menu">
         <ul class="header__menu-list">
           <li class="header__menu-item header__menu-item_active">
-            <a class="header__menu-link">Products</a>
+            <a class="header__menu-link" href="products">Products</a>
           </li>
 
           <li class="header__menu-item">
-            <a class="header__menu-link" href="#0">Dog Care</a>
+            <a class="header__menu-link" href="#dog-care">Dog Care</a>
           </li>
 
           <li class="header__menu-item">
@@ -91,9 +91,9 @@
           <!-- Главный заголовок сайта -->
           <h1 class="main-title">Dog is my Copilot.</h1>
           <!-- Панель с кнопками -->
-          <div class="intro__button-panel">
-            <button type="submit" class="button button_accent">Buy Now</button>
-            <button type="submit" class="button">See Details</button>
+          <div class="button-panel">
+            <button type="button" class="button button_accent">Buy Now</button>
+            <button type="button" class="button">See Details</button>
           </div>
         </div>
         <!-- Фоновая трапеция -->
@@ -133,11 +133,9 @@
               <p class="quality-products__card-text">
                 Dogs leave paw prints forever on our hearts. A dog shade the.
               </p>
-              <p>
-                <object>
-                  <a href="#0" class="card-link"> See Details </a>
-                </object>
-              </p>
+              <object>
+                <a href="#0" class="card-link">See Details</a>
+              </object>
             </a>
           </li>
           <!-- Карточка №2 -->
@@ -160,11 +158,9 @@
               <p class="quality-products__card-text">
                 Dogs leave paw prints forever on our hearts. A dog shade the.
               </p>
-              <p>
-                <object>
-                  <a href="#0" class="card-link"> See Details </a>
-                </object>
-              </p>
+              <object>
+                <a href="#0" class="card-link">See Details</a>
+              </object>
             </a>
           </li>
           <!-- Карточка №3 -->
@@ -187,105 +183,150 @@
               <p class="quality-products__card-text">
                 Dogs leave paw prints forever on our hearts. A dog shade the.
               </p>
-              <p>
-                <object>
-                  <a href="#0" class="card-link"> See Details </a>
-                </object>
-              </p>
+              <object>
+                <a href="#0" class="card-link">See Details</a>
+              </object>
             </a>
           </li>
         </ul>
       </section>
 
-      <!-- Popular Products -->
-      <section class="pop-products">
-        <h2 class="pop-products__title">Popular Products</h2>
-        <p class="pop-products__text">
+      <!-- Products -->
+      <section class="products" id="products">
+        <h2 class="section-title">Products</h2>
+        <p class="products__text description-translucent-text">
           A dog in heat needs more than shade The more people I meet the more I
           like my dog.Dogs leave paw prints forever on our hearts.
         </p>
 
         <!-- Блок больших карточек -->
-        <article class="pop-products__big-cards">
-          <ul class="pop-products__big-cards-list">
+        <article class="products__big-cards">
+          <ul class="products__big-cards-list">
             <!-- Большая карточка №1 -->
-            <li class="pop-products__big-card">
-              <a class="pop-products__big-card-photo-link" href="#0">
+            <li class="products__big-card">
+              <a class="products__big-card-photo-link" href="#0">
                 <img
                   src="./images/harness.png "
                   alt="Harness"
-                  class="pop-products__big-card-photo"
+                  class="products__big-card-photo"
                 />
               </a>
-              <h3 class="pop-products__big-card-title">
-                Mauris blandit aliquet
-              </h3>
+              <h3 class="products__big-card-title">Mauris blandit aliquet</h3>
               <a class="card-link" href="#0">View Details</a>
             </li>
             <!-- Большая карточка №2 -->
-            <li class="pop-products__big-card">
-              <a class="pop-products__big-card-photo-link" href="#0">
+            <li class="products__big-card">
+              <a class="products__big-card-photo-link" href="#0">
                 <img
                   src="./images/reflective-dog-collar.png"
                   alt="Reflective dog collar"
-                  class="pop-products__big-card-photo"
+                  class="products__big-card-photo"
                 />
               </a>
-              <h3 class="pop-products__big-card-title">
-                Mauris blandit aliquet
-              </h3>
+              <h3 class="products__big-card-title">Mauris blandit aliquet</h3>
               <a class="card-link" href="#0">View Details</a>
             </li>
           </ul>
         </article>
 
         <!-- Блок маленьких карточек -->
-        <article class="pop-products__small-cards-list">
-          <ul class="pop-products__small-cards-list">
+        <article class="products__small-cards">
+          <ul class="products__small-cards-list">
             <!-- Большая карточка №1 -->
-            <li class="pop-products__small-card">
-              <a class="pop-products__small-card-photo-link" href="#0">
+            <li class="products__small-card">
+              <a class="products__small-card-photo-link" href="#0">
                 <img
                   src="./images/leash.png "
                   alt="Leash"
-                  class="pop-products__small-card-photo"
+                  class="products__small-card-photo"
                 />
               </a>
-              <h3 class="pop-products__small-card-title">
-                Mauris blandit aliquet
-              </h3>
+              <h4 class="products__small-card-title">Mauris blandit aliquet</h4>
               <a class="card-link" href="#0">View Details</a>
             </li>
             <!-- Большая карточка №2 -->
-            <li class="pop-products__small-card">
-              <a class="pop-products__small-card-photo-link" href="#0">
+            <li class="products__small-card">
+              <a class="products__small-card-photo-link" href="#0">
                 <img
                   src="./images/heavy-collar.png"
                   alt="Heavy collar"
-                  class="pop-products__small-card-photo"
+                  class="products__small-card-photo"
                 />
               </a>
-              <h3 class="pop-products__small-card-title">
-                Mauris blandit aliquet
-              </h3>
+              <h4 class="products__small-card-title">Mauris blandit aliquet</h4>
               <a class="card-link" href="#0">View Details</a>
             </li>
             <!-- Большая карточка №3 -->
-            <li class="pop-products__small-card">
-              <a class="pop-products__small-card-photo-link" href="#0">
+            <li class="products__small-card">
+              <a class="products__small-card-photo-link" href="#0">
                 <img
                   src="./images/pink-collar.png"
                   alt="Pink collar"
-                  class="pop-products__small-card-photo"
+                  class="products__small-card-photo"
                 />
               </a>
-              <h3 class="pop-products__small-card-title">
-                Mauris blandit aliquet
-              </h3>
+              <h4 class="products__small-card-title">Mauris blandit aliquet</h4>
               <a class="card-link" href="#0">View Details</a>
             </li>
           </ul>
         </article>
+        <button type="button" class="button button_rectangular">
+          View All Products
+        </button>
+      </section>
+
+      <!-- Popular Products -->
+      <section class="dog-care" id="dog-care">
+        <img
+          src="./images/doctor-and-dog.png"
+          alt="Dog Doctor"
+          class="dog-care__photo"
+        />
+        <article class="dog-care__description">
+          <p class="title-link">Dog Care</p>
+          <h2 class="dog-care__title section-title">
+            Start your adoption journey with us
+          </h2>
+          <p class="description-translucent-text">
+            A dog in heat needs more than shade The more people I meet the more
+            I like my dog.The more people I meet the more I like my Dogs leave
+            paw prints forever on our hearts.
+          </p>
+          <!-- Панель с кнопками -->
+          <div class="button-panel-dog-care button-panel">
+            <button type="button" class="button button_accent">
+              Appointment Now
+            </button>
+            <button type="button" class="button">See Details</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="subscribtion" id="subscribtion">
+        <h2 class="section-title_subscribtion section-title">
+          How the Monthly Subscription Work?
+        </h2>
+        <ul class="subscribtion__cards-list">
+          <!-- Карточка №1 -->
+          <li class="subscribtion__card">
+            <img
+              class="subscribtion__card-icon"
+              src="./images/montlhy-dog-1.svg"
+              alt="Subscribtion image dog 1"
+            />
+            <div class="subscribtion__card-info">
+              <h3 class="products__small-card-title"> 
+                Dogs leave paw prints forever on our hearts
+              </h3>
+              <p class="subscribtion__card-text">
+                Dogs never bite me. Just humans.Happiness is a warm puppy. My
+                little dog a heartbeat at my feet.Necessity has the face of a
+                dog.
+              </p>
+              <a href="#0" class="card-link">View Details</a>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
 
