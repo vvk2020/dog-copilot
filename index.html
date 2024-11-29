@@ -50,7 +50,7 @@
           </li>
 
           <li class="header__menu-item">
-            <a class="header__menu-link" href="#0">Popular</a>
+            <a class="header__menu-link" href="#gallery">Popular</a>
           </li>
         </ul>
       </nav>
@@ -194,21 +194,21 @@
       <!-- Products -->
       <section class="products" id="products">
         <h2 class="section-title">Products</h2>
-        <p class="products__text description-translucent-text">
+        <p class="description-text_products description-text">
           A dog in heat needs more than shade The more people I meet the more I
           like my dog.Dogs leave paw prints forever on our hearts.
         </p>
 
         <!-- Блок больших карточек -->
         <article class="products__big-cards">
-          <ul class="products__big-cards-list">
+          <ul class="cards-list">
             <!-- Большая карточка №1 -->
             <li class="products__big-card">
-              <a class="products__big-card-photo-link" href="#0">
+              <a class="photo-link_products-big-card photo-link" href="#0">
                 <img
                   src="./images/harness.png "
                   alt="Harness"
-                  class="products__big-card-photo"
+                  class="card-photo"
                 />
               </a>
               <h3 class="products__big-card-title">Mauris blandit aliquet</h3>
@@ -216,11 +216,11 @@
             </li>
             <!-- Большая карточка №2 -->
             <li class="products__big-card">
-              <a class="products__big-card-photo-link" href="#0">
+              <a class="photo-link_products-big-card photo-link" href="#0">
                 <img
                   src="./images/reflective-dog-collar.png"
                   alt="Reflective dog collar"
-                  class="products__big-card-photo"
+                  class="card-photo"
                 />
               </a>
               <h3 class="products__big-card-title">Mauris blandit aliquet</h3>
@@ -231,41 +231,43 @@
 
         <!-- Блок маленьких карточек -->
         <article class="products__small-cards">
-          <ul class="products__small-cards-list">
-            <!-- Большая карточка №1 -->
+          <ul class="cards-list_products-small-cards cards-list">
+            <!-- Маленькая карточка №1 -->
             <li class="products__small-card">
-              <a class="products__small-card-photo-link" href="#0">
-                <img
-                  src="./images/leash.png "
-                  alt="Leash"
-                  class="products__small-card-photo"
-                />
+              <a class="photo-link_products-small-card photo-link" href="#0">
+                <img src="./images/leash.png " alt="Leash" class="card-photo" />
               </a>
-              <h4 class="products__small-card-title">Mauris blandit aliquet</h4>
+              <h4 class="small-title_products-small-card small-title">
+                Mauris blandit aliquet
+              </h4>
               <a class="card-link" href="#0">View Details</a>
             </li>
-            <!-- Большая карточка №2 -->
+            <!-- Маленькая карточка №2 -->
             <li class="products__small-card">
-              <a class="products__small-card-photo-link" href="#0">
+              <a class="photo-link_products-small-card photo-link" href="#0">
                 <img
                   src="./images/heavy-collar.png"
                   alt="Heavy collar"
-                  class="products__small-card-photo"
+                  class="card-photo"
                 />
               </a>
-              <h4 class="products__small-card-title">Mauris blandit aliquet</h4>
+              <h4 class="small-title_products-small-card small-title">
+                Mauris blandit aliquet
+              </h4>
               <a class="card-link" href="#0">View Details</a>
             </li>
-            <!-- Большая карточка №3 -->
+            <!-- Маленькая карточка №3 -->
             <li class="products__small-card">
-              <a class="products__small-card-photo-link" href="#0">
+              <a class="photo-link_products-small-card photo-link" href="#0">
                 <img
                   src="./images/pink-collar.png"
                   alt="Pink collar"
-                  class="products__small-card-photo"
+                  class="card-photo"
                 />
               </a>
-              <h4 class="products__small-card-title">Mauris blandit aliquet</h4>
+              <h4 class="small-title_products-small-card small-title">
+                Mauris blandit aliquet
+              </h4>
               <a class="card-link" href="#0">View Details</a>
             </li>
           </ul>
@@ -287,7 +289,7 @@
           <h2 class="dog-care__title section-title">
             Start your adoption journey with us
           </h2>
-          <p class="description-translucent-text">
+          <p class="description-text">
             A dog in heat needs more than shade The more people I meet the more
             I like my dog.The more people I meet the more I like my Dogs leave
             paw prints forever on our hearts.
@@ -302,11 +304,12 @@
         </article>
       </section>
 
+      <!-- Montly Subscribtion -->
       <section class="subscribtion" id="subscribtion">
         <h2 class="section-title_subscribtion section-title">
           How the Monthly Subscription Work?
         </h2>
-        <ul class="subscribtion__cards-list">
+        <ul class="cards-list_subscribtion cards-list">
           <!-- Карточка №1 -->
           <li class="subscribtion__card">
             <img
@@ -315,18 +318,133 @@
               alt="Subscribtion image dog 1"
             />
             <div class="subscribtion__card-info">
-              <h3 class="products__small-card-title"> 
+              <h3 class="small-title_subscribtion small-title">
                 Dogs leave paw prints forever on our hearts
               </h3>
-              <p class="subscribtion__card-text">
+              <p class="description-text_subscribtion description-text">
                 Dogs never bite me. Just humans.Happiness is a warm puppy. My
                 little dog a heartbeat at my feet.Necessity has the face of a
                 dog.
               </p>
-              <a href="#0" class="card-link">View Details</a>
             </div>
+            <a href="#0" class="card-link">View Details</a>
+          </li>
+          <!-- Карточка №2 -->
+          <li class="subscribtion__card">
+            <img
+              class="subscribtion__card-icon"
+              src="./images/montlhy-dog-2.svg"
+              alt="Subscribtion image dog 2"
+            />
+            <div class="subscribtion__card-info">
+              <h3 class="small-title_subscribtion small-title">
+                Dogs leave paw prints forever on our hearts
+              </h3>
+              <p class="description-text_subscribtion description-text">
+                Dogs never bite me. Just humans.Happiness is a warm puppy. My
+                little dog a heartbeat at my feet.Necessity has the face of a
+                dog.
+              </p>
+            </div>
+            <a href="#0" class="card-link">View Details</a>
+          </li>
+          <!-- Карточка №3 -->
+          <li class="subscribtion__card">
+            <img
+              class="subscribtion__card-icon"
+              src="./images/montlhy-dog-3.svg"
+              alt="Subscribtion image dog 3"
+            />
+            <div class="subscribtion__card-info">
+              <h3 class="small-title_subscribtion small-title">
+                Dogs leave paw prints forever on our hearts
+              </h3>
+              <p class="description-text_subscribtion description-text">
+                Dogs never bite me. Just humans.Happiness is a warm puppy. My
+                little dog a heartbeat at my feet.Necessity has the face of a
+                dog.
+              </p>
+            </div>
+            <a href="#0" class="card-link">View Details</a>
           </li>
         </ul>
+        <button type="button" class="button button_accent">Subscribe</button>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery" id="gallery">
+        <article class="gallery__left-block">
+          <h2 class="section-title">Popular Products Gallery</h2>
+          <p class="description-text_gallery description-text">
+            A dog in heat needs more than shade The more people I meet the more
+            I like my dog.Dogs leave paw prints forever on our hearts.
+          </p>
+          <!-- Галлерея маленьких карточек -->
+          <ul class="cards-list_gallery cards-list">
+            <!-- Галлерея: карточка №1-->
+            <li class="gallery__card">
+              <a
+                class="photo-link_bg-900a08 photo-link_gallery photo-link"
+                href="#0"
+              >
+                <img
+                  src="./images/gallery-prod1.png"
+                  alt="Product #1"
+                  class="card-photo"
+                />
+              </a>
+            </li>
+            <li class="gallery__card">
+              <a
+                class="photo-link_bg-243d7e photo-link_gallery photo-link"
+                href="#0"
+              >
+                <img
+                  src="./images/gallery-prod2.png"
+                  alt="Product #2"
+                  class="card-photo"
+                />
+              </a>
+            </li>
+            <li class="gallery__card">
+              <a
+                class="photo-link_bg-800125 photo-link_gallery photo-link"
+                href="#0"
+              >
+                <img
+                  src="./images/gallery-prod3.png"
+                  alt="Product #3"
+                  class="card-photo"
+                />
+              </a>
+            </li>
+            <li class="gallery__card">
+              <a
+                class="photo-link_bg-c48cae photo-link_gallery photo-link"
+                href="#0"
+              >
+                <img
+                  src="./images/gallery-prod4.png"
+                  alt="Product #4"
+                  class="card-photo"
+                />
+              </a>
+            </li>
+          </ul>
+        </article>
+        <!-- Главный продукт галереи -->
+        <div class="gallery__right-block">
+          <a
+            class="photo-link_bg-c4154b photo-link_gallery-main-product photo-link"
+            href="#0"
+          >
+            <img
+              src="./images/gallery-main-prod.png"
+              alt="Harness"
+              class="products__big-card-photo"
+            />
+          </a>
+        </div>
       </section>
     </main>
 

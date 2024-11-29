@@ -9,6 +9,7 @@ html {
   --color-light: #fff;
   --color-default: #170c04;
   --color-accent: #e27b3a;
+  --photo-link: #fcf2eb;
   --color-accent-translucent: rgba(
     226,
     123,
@@ -287,11 +288,13 @@ ol {
   line-height: 150%;
 }
 
-.card-link {
-  color: var(--color-accent);
-  text-decoration: none;
-  /* cursor: pointer; */
-}
+/* .roducts__card-text {
+  padding: 11px 0 25px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+} */
 
 /************* PRODUCTS *************/
 
@@ -302,7 +305,7 @@ ol {
   margin: 117px auto 0;
 }
 
-.products__text {
+.description-text_products {
   padding-top: 12px;
   padding-bottom: 42px;
   width: 507px;
@@ -310,15 +313,6 @@ ol {
 }
 
 /* Блок больших карточек */
-
-.products__big-cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* flex-direction: column; */
-  gap: 30px;
-  /* border: 1px solid navy; */
-}
 
 .products__big-card {
   display: flex;
@@ -332,14 +326,10 @@ ol {
   mix-blend-mode: darken;
 }
 
-.products__big-card-photo-link {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+.photo-link_products-big-card {
   height: 420px;
   border-radius: 20px;
-  background-color: #fcf2eb;
+  /* background-color: #fcf2eb; */
 }
 
 .products__big-card-title {
@@ -354,15 +344,9 @@ ol {
 
 /* Блок маленьких карточек */
 
-.products__small-cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.cards-list_products-small-cards {
   padding-top: 66px;
   padding-bottom: 46px;
-  /* flex-direction: column; */
-  gap: 30px;
-  /* border: 1px solid navy; */
 }
 
 .products__small-card {
@@ -377,27 +361,48 @@ ol {
   mix-blend-mode: darken;
 }
 
-.products__small-card-photo-link {
+.photo-link_products-small-card {
+  height: 272px;
+  border-radius: 10px;
+  /* background-color: #fcf2eb; */
+}
+
+.small-title_products-small-card {
+  padding-top: 22px;
+  padding-bottom: 10px;
+  /* font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-default); */
+}
+
+/*************  ОБЩИЕ СТИЛИ *************/
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 30px;
+}
+
+.card-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  /* cursor: pointer; */
+}
+
+.card-photo {
+  mix-blend-mode: darken;
+}
+
+.photo-link {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 272px;
-  border-radius: 10px;
-  background-color: #fcf2eb;
+  background-color: var(--photo-link);
 }
-
-.products__small-card-title {
-  padding-top: 22px;
-  padding-bottom: 10px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--color-default);
-}
-
-/*************  ОБЩИЕ СТИЛИ *************/
 
 /* Панель с кнопками */
 .button-panel {
@@ -442,7 +447,7 @@ ol {
   color: var(--color-default);
 }
 
-.description-translucent-text {
+.description-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -450,6 +455,16 @@ ol {
   line-height: 150%;
   color: var(--color-default);
   opacity: 0.6;
+}
+
+.small-title {
+  /* padding-top: 22px; */
+  /* padding-bottom: 10px; */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-default);
 }
 
 /************* DOG CARE *************/
@@ -509,22 +524,17 @@ ol {
   width: 474px;
   text-align: center;
   line-height: 140%;
-  padding-bottom: 38px;
+  padding-bottom: 39px;
 }
 
 /* Лист карточек */
-.subscribtion__cards-list {
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  flex-wrap: wrap;
-  gap: 30px;
-
-  /* margin-top: 70px; */
+.cards-list_subscribtion {
+  padding-bottom: 46px;
 }
+
 .subscribtion__card {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   width: 360px;
@@ -534,6 +544,94 @@ ol {
   width: 307px;
   height: 264px;
 }
+
+.small-title_subscribtion {
+  padding: 51px 0 15px;
+  text-align: center;
+  line-height: 140%;
+}
+
+.description-text_subscribtion {
+  text-align: center;
+  line-height: 19px;
+  padding-bottom: 23px;
+}
+
+/************* GALLERY *************/
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 31px;
+  padding-top: 128px;
+  /* border: 1px solid blue; */
+  min-height: 639px;
+}
+
+.gallery__left-block {
+  width: 554px;
+  /* border: 1px dashed red; */
+}
+
+.gallery__right-block {
+  width: 555px;
+  /* border: 1px dashed red; */
+  /* border-radius: 5px; */
+}
+
+.description-text_gallery {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.photo-link_gallery {
+  height: 170px;
+  width: 262px;
+  border-radius: 5px;
+  /* background-color: #fcf2eb; */
+}
+
+.products__small-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 66px;
+  padding-bottom: 46px;
+  gap: 30px;
+  /* border: 1px solid navy; */
+}
+
+.cards-list_gallery {
+  padding-top: 33px;
+  /* padding-bottom: 46px; */
+}
+
+.photo-link_bg-900a08 {
+  background-color: rgba(144, 10, 8, 0.1); /* ##900a08 + opacity 10% */
+}
+
+.photo-link_bg-243d7e {
+  background-color: rgba(36, 61, 126, 0.1); /* #243d7e + opacity 10% */
+}
+
+.photo-link_bg-800125 {
+  background-color: rgba(128, 1, 37, 0.1); /* #800125 + opacity 10% */
+}
+
+.photo-link_bg-c48cae {
+  background-color: rgba(196, 140, 174, 0.1); /* #c48cae + opacity 10% */
+}
+
+.photo-link_bg-c4154b {
+  background-color: rgba(196, 21, 75, 0.1); /* #c48cae + opacity 10% */
+}
+
+.photo-link_gallery-main-product {
+  height: 100%;
+}
+
+/* 463
+425 */
 
 /* pop-products__title subscribtion__card-title*/
 
