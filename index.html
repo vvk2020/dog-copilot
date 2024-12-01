@@ -449,56 +449,90 @@
 
       <!-- Gallery -->
       <section class="testimonial" id="testimonial">
-        <h2 class="section-title_testimonial section-title">
-          Products Testimonial
-        </h2>
+        <h2 class="section-title">Products Testimonial</h2>
         <article class="testimonial__cards">
           <!-- Стопка сдвинутых карточек с отзывами покупателей -->
-          <ul class="testimonial__cards-list">
-            <!-- Карточка с отзывом №1-->
-            <li class="testimonial__card"></li>
-            <ul class="testimonial__cards-list">
-              <!-- Карточка с отзывом №2-->
-              <li class="c1 testimonial__card"></li>
-              <ul class="testimonial__cards-list">
-                <!-- Карточка с отзывом №3-->
-                <li class="c1 testimonial__card"></li>
-                <ul class="testimonial__cards-list">
-                  <!-- Карточка с отзывом №4-->
-                  <li class="c1 testimonial__card">
-                    <!-- class="photo-link_bg-c48cae photo-link_gallery photo-link" -->
-                    <a class="photo-link_testimonial photo-link" href="#0">
-                      <img
-                        src="./images/men-icon.png"
-                        alt="Man Photo"
-                        class=""
-                      />
+          <a class="testimonial__cards-list" href="#0">
+            <!-- Открывающиеся кавычки -->
+            <div class="testimonial__card-header">
+              <img
+                src="./images/quote-open.svg"
+                alt="Quote open photo"
+                class="quote"
+              />
+              <!-- Иконка клиента -->
+              <img
+                src="./images/men-icon.png"
+                alt="Man Photo"
+                class="man-photo"
+              />
+            </div>
 
-                      <p class="description-text_testimonial description-text">
-                        A dog in heat needs more than shade The more people paw
-                        prints forever on our hearts. I meet the more I like my
-                        dog.Dogs leave paw prints forever on our hearts.
-                      </p>
-                      <h4 class="">Margaret Street</h4>
-                      <p
-                        class="description-text_testimonial-spec description-text"
-                      >
-                        UI&UX Designer
-                      </p>
-                    </a>
-                  </li>
-                  <!-- <li class="c1">***</li> -->
-                </ul>
-              </ul>
-            </ul>
-          </ul>
+            <!-- Отзыв клиента -->
+            <p class="description-text_testimonial description-text">
+              A dog in heat needs more than shade The more people paw prints
+              forever on our hearts. I meet the more I like my dog.Dogs leave
+              paw prints forever on our hearts.
+            </p>
+
+            <!-- Звездный рейтинг клиента (from: https://habr.com/ru/articles/588695/) -->
+            <svg width="0" height="0" viewBox="0 0 32 32">
+              <defs>
+                <mask id="null">
+                  <rect x="0" y="0" width="32" height="32" fill="white" />
+                  <rect x="0%" y="0" width="32" height="32" fill="grey" />
+                </mask>
+
+                <mask id="half">
+                  <rect x="0" y="0" width="32" height="32" fill="white" />
+                  <rect x="50%" y="0" width="32" height="32" fill="grey" />
+                </mask>
+
+                <mask id="full">
+                  <rect x="0" y="0" width="32" height="32" fill="white" />
+                  <!-- <rect x="100%" y="0" width="32" height="32" fill="grey" /> -->
+                </mask>
+
+                <symbol viewBox="0 0 32 32" id="star">
+                  <path
+                    d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z"
+                  />
+                </symbol>
+              </defs>
+            </svg>
+
+            <p class="c-rate">
+              <svg class="c-icon" width="15" height="15" viewBox="0 0 32 32">
+                <use xlink:href="#star" mask="url(#full)" fill="#e27b3a"></use>
+              </svg>
+              <svg class="c-icon" width="15" height="15" viewBox="0 0 32 32">
+                <use xlink:href="#star" mask="url(#full)" fill="#e27b3a"></use>
+              </svg>
+              <svg class="c-icon" width="15" height="15" viewBox="0 0 32 32">
+                <use xlink:href="#star" mask="url(#full)" fill="#e27b3a"></use>
+              </svg>
+              <svg class="c-icon" width="15" height="15" viewBox="0 0 32 32">
+                <use xlink:href="#star" mask="url(#null)" fill="#e27b3a"></use>
+              </svg>
+              <svg class="c-icon" width="15" height="15" viewBox="0 0 32 32">
+                <use xlink:href="#star" mask="url(#null)" fill="#e27b3a"></use>
+              </svg>
+            </p>
+
+            <!-- ФИО и должность клиента -->
+            <h4 class="">Margaret Street</h4>
+            <p class="description-text_testimonial-spec description-text">
+              UI&UX Designer
+            </p>
+          </a>
+
           <!-- Селектор карточек -->
           <div class="testimonial__selector">
-            <a class="photo-link" href="#0">
-              <img src="./images/arrow-up.svg" alt="Arrow Up" class=""
+            <a class="photo-link_testimonial-arrow-bg photo-link" href="#0">
+              <img src="./images/arrow-up.svg" alt="Arrow Up"
             /></a>
-            <a class="photo-link" href="#0">
-              <img src="./images/arrow-down.svg" alt="Arrow Down" class=""
+            <a class="photo-link_testimonial-arrow-bg photo-link" href="#0">
+              <img src="./images/arrow-down.svg" alt="Arrow Down"
             /></a>
           </div>
         </article>
