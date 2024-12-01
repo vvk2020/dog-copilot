@@ -688,12 +688,11 @@ ol {
 .testimonial__card-header {
   place-self: stretch;
   /* width: 100%; */
-  display: grid;  
+  display: grid;
   grid-template-columns: 41px 1fr 41px;
   place-items: center;
   /* border: 1px dotted blue; */
 }
-
 
 .photo-link_testimonial-arrow-bg {
   background-color: transparent;
@@ -708,4 +707,22 @@ ol {
 .man-photo {
   align-self: center;
   /* border: 1px dotted green; */
+}
+
+.testimonial__rating {
+  padding-top: 14px;
+  display: flex;
+  gap: 1px;
+}
+
+.testimonial__client-name {
+  padding-top: 23px;
+
+  font-family: "Roboto";
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* text-align: center; */
+  color: var(--color-default)
 }
