@@ -715,14 +715,20 @@ ol {
   gap: 1px;
 }
 
-.testimonial__client-name {
+.testimonial__card-footer {
   padding-top: 23px;
+}
 
+.testimonial__client-name {
   font-family: "Roboto";
   /* font-style: normal; */
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   /* text-align: center; */
-  color: var(--color-default)
+  color: var(--color-default);
+}
+
+.quote {
+  opacity: 0.05;
 }
