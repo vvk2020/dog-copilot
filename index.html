@@ -377,7 +377,7 @@
           <h2 class="section-title">Popular Products Gallery</h2>
           <p class="description-text_gallery description-text">
             A dog in heat needs more than shade The more people I meet the more
-            I like my dog.Dogs leave paw prints forever on our hearts.
+            I like my dog. Dogs leave paw prints forever on our hearts.
           </p>
           <!-- Галлерея маленьких карточек -->
           <ul class="cards-list_gallery cards-list">
@@ -521,10 +521,18 @@
 
             <!-- ФИО и должность клиента -->
             <div class="testimonial__card-footer">
-              <h4 class="testimonial__client-name">Margaret Street</h4>
-              <p class="description-text_testimonial-spec description-text">
-                UI&UX Designer
-              </p>
+              <p></p>
+              <div>
+                <h4 class="testimonial__client-name">Margaret Street</h4>
+                <p class="description-text_testimonial-spec description-text">
+                  UI&UX Designer
+                </p>
+              </div>
+              <img
+                src="./images/quote-close.svg"
+                alt="Quote close photo"
+                class="quote"
+              />
             </div>
           </a>
 
@@ -541,7 +549,39 @@
       </section>
     </main>
 
-    <!-- <footer class="footer content-section content-section_theme_dark">
+    <!-- Message -->
+    <section class="feedback">
+      <div class="feedback__description">
+        <h2 class="section-title_feedback section-title">
+          Dogs leave paw prints forever.
+        </h2>
+        <p class="description-text_feedback description-text">
+          A dog in heat needs more than shade The more people I meet the more I
+          like my dog.
+        </p>
+      </div>
+      <form class="feedback-form">
+        <fieldset class="feedback-form__fieldset">
+          <!-- <h2 class="feedback-form__fieldset-title">Город</h2> -->
+          <label class="feedback-form__label">
+            <span class="feedback-form__label-text visually-hidden"
+              >Enter your message</span
+            >
+            <input
+              type="text"
+              placeholder="Enter your message"
+              name="feedback-text"
+              class="feedback-form__textfield"
+            />
+          </label>
+        </fieldset>
+        <button type="submit" class="button feedback-form__submit-button">
+          Send
+        </button>
+      </form>
+    </section>
+
+    <!-- <footer class="footer">
       <p class="footer__copy">© VЁRSTKA</p>
       <ul class="footer__links">
         <li>
