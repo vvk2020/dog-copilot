@@ -770,17 +770,16 @@ ol {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%; /*contain;*/
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 
 .section-title_feedback {
   text-align: left;
   line-height: 1.4;
-  /* line-height: .7; */
-  /* padding-top: 5px; */
-  /* color: var(--color-light); */
+  margin-top: -17px; /* Pixel Perfect */
+  letter-spacing: 0.006em; /* Pixel Perfect */
   color: inherit;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 
 .section-title_feedback::first-line {
@@ -790,63 +789,61 @@ ol {
 
 .feedback__description {
   color: var(--color-light);
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 
 .description-text_feedback {
-  padding-top: 2px;
+  padding-top: 4px;
   /* padding-bottom: 20px; */
   color: inherit;
-}
-
-.feedback-form__textfield {
-  /* Enter your message */
-
-  /* height: 41px; */
-  font-family: "Roboto";
-  /* font-style: normal; */
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 41px;
-  /* identical to box height, or 254% */
-  /* display: flex; */
-  /* align-items: center; */
-
-  /* background-color: var(--color-light); */
-  color: var(--color-default);
-  /* border-color: var(--color-light); */
-  opacity: 0.4;
 }
 
 .feedback-form__textfield {
   border-color: transparent;
   outline: 1px solid transparent;
   width: 100%;
+  font-family: "Roboto";
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 254%; /* 41px */
+  color: var(--color-default);
+  opacity: 0.4;
 }
 
 .feedback-form__label {
   display: flex;
   width: 100%;
-  /* height: 100%; */
-  
   background-color: transparent;
-  padding: 15px 20px;
-  border: 1px dashed blue;
-  /* border-color: transparent; */
+  padding: 15px;
+  /* border: 1px dashed blue; */
+  
 }
 
 .feedback-form__fieldset {
   display: flex;
   height: 70px;
   background-color: var(--color-light);
-  /* border-color: red; /*var(--color-light);*/
   border-color: transparent;
-  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .feedback-form {
   display: grid;
-  grid-template-columns: 1fr 115px;
+  grid-template-columns: 1fr 116px;
   border-radius: 10px;
-  border: 1px dashed red; /*var(--color-light);*/
+}
+
+.feedback-form__submit-button {
+  background-color: var(--color-accent);
+  font-family: inherit; /* 'Roboto' 400 */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 226%;
+  color: var(--color-light);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-color: transparent;
+  cursor: pointer;
 }
