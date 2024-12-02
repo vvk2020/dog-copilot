@@ -199,7 +199,7 @@ ol {
 
 /* Заголовок листа с карточками */
 .main-title {
-  font-family: "Poppins Bold", serif;
+  font-family: "Poppins Bold", sans-serif;
   font-weight: 700;
   font-size: 100px;
   line-height: 120%;
@@ -275,14 +275,14 @@ ol {
 }
 
 .quality-products__card-title {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 25px;
 }
 
 .quality-products__card-text {
   padding: 11px 0 25px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -290,7 +290,7 @@ ol {
 
 /* .roducts__card-text {
   padding: 11px 0 25px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -335,7 +335,7 @@ ol {
 .products__big-card-title {
   padding-top: 27px;
   padding-bottom: 10px;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -380,7 +380,7 @@ ol {
 .small-title_products-small-card {
   padding-top: 22px;
   padding-bottom: 10px;
-  /* font-family: "Poppins";
+  /* font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -448,7 +448,7 @@ ol {
 }
 
 .section-title {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   /* font-style: normal; */
   font-weight: 500;
   font-size: 32.25px;
@@ -458,7 +458,7 @@ ol {
 }
 
 .description-text {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -470,7 +470,7 @@ ol {
 .small-title {
   /* padding-top: 22px; */
   /* padding-bottom: 10px; */
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -499,7 +499,7 @@ ol {
 }
 
 .title-link {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   /* font-style: normal; */
   font-weight: 500;
   font-size: 16px;
@@ -720,7 +720,7 @@ ol {
 }
 
 .testimonial__client-name {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   /* font-style: normal; */
   font-weight: 400;
   font-size: 16px;
