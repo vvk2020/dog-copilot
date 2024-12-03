@@ -782,11 +782,6 @@ ol {
   /* border: 1px dashed blue; */
 }
 
-.section-title_feedback::first-line {
-  /* line-height: .7; */
-  /* color: red; */
-}
-
 .feedback__description {
   color: var(--color-light);
   /* border: 1px dashed red; */
