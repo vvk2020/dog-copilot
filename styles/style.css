@@ -268,7 +268,7 @@ ol {
   display: block;
   width: var(--quality-products__card-width);
   flex-direction: column;
-  padding: 40px 25px 20px;
+  padding: 40px 25px 21px;
   text-decoration: none;
   text-align: center;
   color: var(--color-default);
@@ -281,7 +281,7 @@ ol {
 }
 
 .quality-products__card-text {
-  padding: 12px 6px 25px;
+  padding: 9px 6px 23px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -356,8 +356,8 @@ ol {
 }
 
 .cards-list_products-small-cards {
-  padding-top: 67px;
-  padding-bottom: 46px;
+  padding-top: 65px;
+  padding-bottom: 42px;
 }
 
 .products__small-card {
@@ -379,8 +379,8 @@ ol {
 }
 
 .small-title_products-small-card {
-  padding-top: 24px;
-  padding-bottom: 6px;
+  padding-top: 22px;
+  padding-bottom: 10px;
   /* font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -599,7 +599,6 @@ ol {
   padding-left: 2px;
   padding-right: 2px;
   letter-spacing: 0.01em; /* Pixel Perfect */
-  line-height: 154%;
   text-align: center;
 }
 
@@ -643,7 +642,7 @@ ol {
 
 .testimonial {
   /* padding-top: 120px; */
-  margin: 118px auto 0;
+  margin: 120px auto 0;
   /* width: 620px; */
 
   /* border: 1px dashed green; */
@@ -705,7 +704,7 @@ ol {
 }
 
 .description-text_testimonial {
-  padding-top: 17px;
+  padding-top: 16px;
   text-align: center;
   /* border: 1px dotted red; */
 }
@@ -726,7 +725,7 @@ ol {
   justify-items: center;
   align-items: center;
   grid-template-columns: 41px 1fr 41px;
-  margin-top: 22px;
+  margin-top: 21px;
   width: 100%;
   /* border: 1px dashed blue; */
 }
@@ -756,7 +755,7 @@ ol {
 /************* FEEDBACK *************/
 
 .feedback {
-  margin: 90px auto 0;
+  margin: 86px auto 0;
   /* padding-bottom: 500px; */
   display: grid;
   grid-template-columns: 423px 1fr;
@@ -770,14 +769,19 @@ ol {
   background-image: url(../images/blue-rectangle.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%; /*contain;*/
+  /* background-size: 100% 100%; 
+  /*background-size: contain;*/
+  /* background-size: cover; */
+  /* background-size: 100%; */
+
+  /* object-fit: fill; */
   /* border: 1px dashed blue; */
 }
 
 .section-title_feedback {
   text-align: left;
   line-height: 1.4;
-  margin-top: -13px; /* Pixel Perfect */
+  margin-top: -17px; /* Pixel Perfect */
   letter-spacing: 0.006em; /* Pixel Perfect */
   color: inherit;
   /* border: 1px dashed blue; */
@@ -813,7 +817,6 @@ ol {
   background-color: transparent;
   padding: 15px;
   /* border: 1px dashed blue; */
-  
 }
 
 .feedback-form__fieldset {
@@ -844,4 +847,87 @@ ol {
   cursor: pointer;
 }
 
-/* :) */
+/************* Footer *************/
+
+.footer {
+  margin: 70px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  gap: 25px;
+  padding: 59px 180px 105px 179px;
+  width: 100%;
+  height: 364px;
+  background-image: url(../images/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #fcf2eb;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 66px;
+  gap: 34px;
+  list-style: none;
+  /* border: 1px solid brown; */
+}
+
+.footer__menu-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__right-menu-list {
+  align-items: end;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer__logo-image {
+  width: 48px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.footer-title {
+  font-family: "Roboto";
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.footer__socials-links {
+  display: flex;
+  gap: 25px;
+  margin-bottom: -4px;
+}
+
+.footer__socials-logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.email-link {
+  font-family: "Roboto";
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--color-accent);
+  opacity: 0.8;
+}
