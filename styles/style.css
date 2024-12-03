@@ -268,7 +268,7 @@ ol {
   display: block;
   width: var(--quality-products__card-width);
   flex-direction: column;
-  padding: 40px 25px 21px;
+  padding: 40px 25px 20px;
   text-decoration: none;
   text-align: center;
   color: var(--color-default);
@@ -281,7 +281,7 @@ ol {
 }
 
 .quality-products__card-text {
-  padding: 9px 6px 23px;
+  padding: 12px 6px 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -356,8 +356,8 @@ ol {
 }
 
 .cards-list_products-small-cards {
-  padding-top: 65px;
-  padding-bottom: 42px;
+  padding-top: 67px;
+  padding-bottom: 46px;
 }
 
 .products__small-card {
@@ -379,8 +379,8 @@ ol {
 }
 
 .small-title_products-small-card {
-  padding-top: 22px;
-  padding-bottom: 10px;
+  padding-top: 24px;
+  padding-bottom: 6px;
   /* font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -599,6 +599,7 @@ ol {
   padding-left: 2px;
   padding-right: 2px;
   letter-spacing: 0.01em; /* Pixel Perfect */
+  line-height: 154%;
   text-align: center;
 }
 
@@ -642,7 +643,7 @@ ol {
 
 .testimonial {
   /* padding-top: 120px; */
-  margin: 120px auto 0;
+  margin: 118px auto 0;
   /* width: 620px; */
 
   /* border: 1px dashed green; */
@@ -704,7 +705,7 @@ ol {
 }
 
 .description-text_testimonial {
-  padding-top: 16px;
+  padding-top: 17px;
   text-align: center;
   /* border: 1px dotted red; */
 }
@@ -725,7 +726,7 @@ ol {
   justify-items: center;
   align-items: center;
   grid-template-columns: 41px 1fr 41px;
-  margin-top: 21px;
+  margin-top: 22px;
   width: 100%;
   /* border: 1px dashed blue; */
 }
@@ -755,7 +756,7 @@ ol {
 /************* FEEDBACK *************/
 
 .feedback {
-  margin: 86px auto 0;
+  margin: 90px auto 0;
   /* padding-bottom: 500px; */
   display: grid;
   grid-template-columns: 423px 1fr;
@@ -776,15 +777,10 @@ ol {
 .section-title_feedback {
   text-align: left;
   line-height: 1.4;
-  margin-top: -17px; /* Pixel Perfect */
+  margin-top: -13px; /* Pixel Perfect */
   letter-spacing: 0.006em; /* Pixel Perfect */
   color: inherit;
   /* border: 1px dashed blue; */
-}
-
-.section-title_feedback::first-line {
-  /* line-height: .7; */
-  /* color: red; */
 }
 
 .feedback__description {
