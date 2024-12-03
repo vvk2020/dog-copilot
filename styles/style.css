@@ -5,7 +5,7 @@
 }
 
 html {
-  /* Стандатные цвета */
+  /* Типы цветов */
   --color-light: #fff;
   --color-default: #170c04;
   --color-accent: #e27b3a;
@@ -25,16 +25,12 @@ html {
   /* Quality Products: фоновая картинка карточек */
   --quality-products__card-icon-width: 37px;
   --quality-products__card-icon-height: 37px;
-
-  /* размеры фото списка карточек городов */
-  /* --thumbnail-width: 194px;
-  --thumbnail-height: 103px; */
-
   block-size: 100%;
 }
 
 .page {
-  /* margin: auto; */
+  position: relative; /* для позиционирования фонового рисунка */
+  margin: 0 auto;
   color: var(--color-default);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -42,9 +38,6 @@ html {
   background-color: var(--color-light);
   inline-size: 1500px;
   block-size: 100%;
-  /* border: 1px solid navy; */
-  margin: 0 auto; /* ??? */
-  position: relative; /* для позиционирования фонового рисунка */
 }
 
 h1,
@@ -82,164 +75,115 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 31px 178px 12px; */
   padding: 30px 176px 13px;
-  /* border: 1px solid red; */
 }
 
 .header__logo {
   display: flex; /* для задания ширины картинке логотипа, заключенному в inline тег <a>*/
   align-items: center;
   text-decoration: none;
-  /* border: 1px solid violet; */
 }
 
 .header__logo-image {
   width: 36px;
   object-fit: contain;
-  /* border: 1px solid green; */
 }
 
 .header__logo-text {
   padding-left: 7px;
+  color: var(--color-dark);
   font-weight: 500;
   font-size: 22px;
-  color: var(--color-dark);
 }
 
 .header__menu {
   padding-left: 60px;
-  /* border: 1px solid green; */
 }
 
 .header__menu-list {
   display: flex;
   gap: 55px;
   list-style: none;
-  /* border: 1px solid brown; */
 }
 
 .header__menu-link {
   color: inherit;
   text-decoration: none;
-  /* font-size: 16px; */ /* наследуется от .page */
 }
 
 .header__menu-link:hover {
   text-decoration: underline;
-  /* cursor: pointer; */ /* по умолчанию для <a> */
 }
 
 .header__toolbar-list {
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
   gap: 40px;
   list-style: none;
-  /* border: 1px solid brown; */
 }
-
-/* .content {
-  display: grid;
-  align-items: end;
-  gap: 30px;
-  grid-template: 1fr / 711px 399px;
-} */
 
 /************* INTRO *************/
 
 .intro {
-  /* display: flex; */
-
-  padding-left: 170px;
   display: flex;
   align-items: center;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* border: 1px solid red; */
+  padding-left: 170px;
 }
 
 .intro__left-block {
   display: block;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* border: 1px solid green; */
 }
 
 .intro__background-image {
   position: absolute;
-  /* margin: 0; */
   top: 0;
   right: -14px; /* выравнивание трапеции  по правому краю */
   width: 559px;
   height: 693px;
-  /* background-image: url(../images/trapezoid.svg);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 525px auto; */
-  /* border: 1px solid green; */
 }
 
 .intro__puppy-image {
-  /* position: absolute; */
-  /* padding-top: 45px; */
   top: 0;
-  /* right: 0; */
   left: 0;
   width: 629px;
   height: 610px;
   mix-blend-mode: darken;
-  /* background-color: transparent; */
-  /* background-image: url(../images/trapezoid.svg);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 525px auto; */
-  /* border: 1px solid blue; */
 }
 
 /* Заголовок листа с карточками */
 .main-title {
+  width: 522px;
+  padding-bottom: 49px;
   font-family: "Poppins Bold", sans-serif;
   font-weight: 700;
   font-size: 100px;
   line-height: 120%;
-  /* padding-top: 136px; */
-  padding-bottom: 49px;
-  width: 522px;
 }
 
 /************* QUALITY PRODUCTS  *************/
 
 .quality-products-list {
-  padding-top: 160px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  padding-top: 160px;
 }
 
 .quality-products__card {
   position: relative;
-  /* border: 1px solid navy; */
-  /* width: var(--quality-products__card-width); */
-  /* height: 241px; */
-  background: var(--color-light);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  background: var(--color-light);
 }
 
 .quality-products__card-icon {
   position: absolute;
-  /* top: -22px;
-  left: 161px;
-  width: 37px;
-  height: 37px; */
-
+  top: calc(-1 * (var(--quality-products__card-icon-height) / 2) - 3px);
   left: calc(
     var(--quality-products__card-width) / 2 -
       var(--quality-products__card-icon-width) / 2
   );
-  top: calc(-1 * (var(--quality-products__card-icon-height) / 2) - 3px);
   width: var(--quality-products__card-icon-width);
   height: var(--quality-products__card-icon-height);
   mix-blend-mode: darken;
@@ -247,13 +191,11 @@ ol {
 
 .quality-products__card-icon-bg {
   position: absolute;
-  /* top: -25px; */
-  /* left: 150px; */
+  top: calc(-1 * (var(--quality-products__card-icon-bg-height) / 2) - 3px);
   left: calc(
     var(--quality-products__card-width) / 2 -
       var(--quality-products__card-icon-bg-width) / 2
   );
-  top: calc(-1 * (var(--quality-products__card-icon-bg-height) / 2) - 3px);
   width: var(--quality-products__card-icon-bg-width);
   height: var(--quality-products__card-icon-bg-height);
 }
@@ -264,14 +206,13 @@ ol {
 }
 
 .quality-products__card-link {
-  /* display: flex; */
   display: block;
-  width: var(--quality-products__card-width);
   flex-direction: column;
+  width: var(--quality-products__card-width);
   padding: 40px 25px 21px;
-  text-decoration: none;
-  text-align: center;
   color: var(--color-default);
+  text-align: center;
+  text-decoration: none;
 }
 
 .quality-products__card-title {
@@ -289,14 +230,6 @@ ol {
   letter-spacing: 0.01em; /* Pixel Perfect */
 }
 
-/* .roducts__card-text {
-  padding: 11px 0 25px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-} */
-
 /************* PRODUCTS *************/
 
 .products {
@@ -307,9 +240,9 @@ ol {
 }
 
 .description-text_products {
+  width: 507px;
   padding-top: 12px;
   padding-bottom: 43px;
-  width: 507px;
   text-align: center;
 }
 
@@ -320,7 +253,6 @@ ol {
   flex-direction: column;
   align-items: center;
   width: 555px;
-  /* border: 1px solid red; */
 }
 
 .products__big-card-photo {
@@ -330,17 +262,16 @@ ol {
 .photo-link_products-big-card {
   height: 420px;
   border-radius: 20px;
-  /* background-color: #fcf2eb; */
 }
 
 .products__big-card-title {
   padding-top: 27px;
   padding-bottom: 7px;
+  color: var(--color-default);
   font-family: "Poppins", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 25px;
-  color: var(--color-default);
+  font-style: normal;
 }
 
 /* Блок маленьких карточек */
@@ -349,10 +280,9 @@ ol {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
   padding-top: 64px;
   padding-bottom: 46px;
-  gap: 30px;
-  /* border: 1px solid navy; */
 }
 
 .cards-list_products-small-cards {
@@ -365,7 +295,6 @@ ol {
   flex-direction: column;
   align-items: center;
   width: 360px;
-  /* border: 1px solid red; */
 }
 
 .products__small-card-photo {
@@ -375,17 +304,11 @@ ol {
 .photo-link_products-small-card {
   height: 272px;
   border-radius: 10px;
-  /* background-color: #fcf2eb; */
 }
 
 .small-title_products-small-card {
   padding-top: 22px;
   padding-bottom: 10px;
-  /* font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--color-default); */
 }
 
 /*************  ОБЩИЕ СТИЛИ *************/
@@ -393,14 +316,12 @@ ol {
 .cards-list {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
   gap: 30px;
 }
 
 .card-link {
   color: var(--color-accent);
   text-decoration: none;
-  /* cursor: pointer; */
 }
 
 .card-photo {
@@ -409,9 +330,9 @@ ol {
 
 .photo-link {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-color: var(--photo-link);
 }
 
@@ -419,29 +340,26 @@ ol {
 .button-panel {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: start; */
-  /* justify-content: center; */
   align-items: center;
   gap: 20px;
-  /* border: 1px solid brown; */
 }
 
 .button {
+  border: 1px solid var(--color-accent-translucent);
   border-radius: 24px;
-  background-color: transparent;
   padding: 11px 30px;
+  color: var(--color-accent);
   font-family: inherit; /* 'Roboto' 400 */
   font-size: 16px;
   line-height: 150%;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent-translucent);
+  background-color: transparent;
   cursor: pointer;
 }
 
 .button_accent {
-  background-color: var(--color-accent);
-  color: var(--color-light);
   border: 1px solid transparent;
+  color: var(--color-light);
+  background-color: var(--color-accent);
 }
 
 .button_rectangular {
@@ -449,36 +367,31 @@ ol {
 }
 
 .section-title {
+  color: var(--color-default);
   font-family: "Poppins", sans-serif;
-  /* font-style: normal; */
   font-weight: 500;
   font-size: 32.25px;
-  /* line-height: 48px; */
-  text-align: center;
-  color: var(--color-default);
   letter-spacing: 0.01em; /* Pixel Perfect */
-  /* border: 1px dashed navy; */
+  text-align: center;
 }
 
 .description-text {
+  opacity: 0.6;
+  color: var(--color-default);
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  font-style: normal;
   line-height: 150%;
-  color: var(--color-default);
-  opacity: 0.6;
   letter-spacing: 0.01em; /* Pixel Perfect */
 }
 
 .small-title {
-  /* padding-top: 22px; */
-  /* padding-bottom: 10px; */
+  color: var(--color-default);
   font-family: "Poppins", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  color: var(--color-default);
+  font-style: normal;
 }
 
 /************* DOG CARE *************/
@@ -489,35 +402,30 @@ ol {
   align-items: center;
   gap: 40px;
   margin: 79px 125px 0;
-  /* border: 1px solid red; */
 }
 
 .dog-care__photo {
   padding: 46px 24px 41px 26px;
-  /* border: 1px solid blue; */
 }
 
 .dog-care__description {
   width: 487px;
-  /* border: 1px solid green; */
 }
 
 .title-link {
+  color: var(--color-accent); /*#e27b3a;*/
   font-family: "Roboto", sans-serif;
-  /* font-style: normal; */
   font-weight: 500;
   font-size: 16px;
-  /* line-height: 19px; */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-accent); /*#e27b3a;*/
 }
 
 .dog-care__title {
   padding: 4px 0 13px;
-  text-align: left;
-  line-height: 140%;
   color: var(--color-default);
+  line-height: 140%;
+  text-align: left;
 }
 
 .button-panel-dog-care {
@@ -529,16 +437,15 @@ ol {
 .subscribtion {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding: 70px 180px 0;
 }
 
 .section-title_subscribtion {
   width: 474px;
-  text-align: center;
-  line-height: 140%;
   padding-bottom: 39px;
+  line-height: 140%;
+  text-align: center;
 }
 
 /* Лист карточек */
@@ -549,7 +456,6 @@ ol {
 .subscribtion__card {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 360px;
 }
@@ -561,14 +467,14 @@ ol {
 
 .small-title_subscribtion {
   padding: 51px 0 15px;
-  text-align: center;
   line-height: 140%;
+  text-align: center;
 }
 
 .description-text_subscribtion {
-  text-align: center;
-  line-height: 19px;
   padding-bottom: 23px;
+  line-height: 19px;
+  text-align: center;
 }
 
 /************* GALLERY *************/
@@ -577,36 +483,31 @@ ol {
   display: flex;
   justify-content: center;
   gap: 31px;
-  padding-top: 130px;
   min-height: 639px;
-  /* border: 1px solid blue; */
+  padding-top: 130px;
 }
 
 .gallery__left-block {
   width: 554px;
-  /* border: 1px dashed red; */
 }
 
 .gallery__right-block {
-  width: 555px;
-  /* border: 1px dashed red; */
-  /* border-radius: 10px; */
   display: flex;
+  width: 555px;
 }
 
 .description-text_gallery {
   padding-top: 10px;
-  padding-left: 2px;
   padding-right: 2px;
+  padding-left: 2px;
   letter-spacing: 0.01em; /* Pixel Perfect */
   text-align: center;
 }
 
 .photo-link_gallery {
-  height: 170px;
   width: 262px;
+  height: 170px;
   border-radius: 5px;
-  /* background-color: #fcf2eb; */
 }
 
 .cards-list_gallery {
@@ -634,69 +535,54 @@ ol {
 }
 
 .photo-link_gallery-main-product {
-  /* height: 100%; */
   border-radius: 10px;
 }
 
 /************* TESTIMONIAL *************/
 
 .testimonial {
-  /* padding-top: 120px; */
   margin: 120px auto 0;
-  /* width: 620px; */
-
-  /* border: 1px dashed green; */
 }
 
 .testimonial__cards {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* align-items: center; */
   gap: 19px; /* зазор между селектором и стопкой карточек */
   margin-top: 50px;
 }
 
 .testimonial__cards-list {
-  /* position: relative; */
-  margin-left: 32px; /* Pixel Refect */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-
-  /* align-items: start; */
   width: 555px;
   height: 272px;
-  background: #fff;
+  margin-left: 32px; /* Pixel Refect */
+  border-radius: 10px;
+  padding: 27px 30px 21px;
   /* 4 карточки и их тени */
   box-shadow: 0 0 #fff, 0 0 20px rgba(0, 0, 0, 0.06), -10px -10px #fff,
     -10px -10px 20px rgba(0, 0, 0, 0.04), -20px -20px #fff,
     -20px -20px 20px rgba(0, 0, 0, 0.04), -30px -30px #fff,
     -30px -30px 20px rgba(0, 0, 0, 0.04);
-
-  padding: 27px 30px 21px;
   text-decoration: none;
-  border-radius: 10px;
-  /* border: 1px dashed red; */
+  background: #fff;
 }
 
 .testimonial__selector {
-  padding-top: 85px; /* Pixel Pefect */
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 18px; /* зазор между стрелками селектора */
-  /* border: 1px dashed blue; */
+  padding-top: 85px; /* Pixel Pefect */
 }
 
 .testimonial__card-header {
-  place-self: stretch;
-  /* width: 100%; */
   display: grid;
   grid-template-columns: 41px 1fr 41px;
   place-items: center;
-  /* border: 1px dotted blue; */
+  place-self: stretch;
 }
 
 .photo-link_testimonial-arrow-bg {
@@ -706,38 +592,33 @@ ol {
 .description-text_testimonial {
   padding-top: 16px;
   text-align: center;
-  /* border: 1px dotted red; */
 }
 
 .man-photo {
   align-self: center;
-  /* border: 1px dotted green; */
 }
 
 .testimonial__rating {
-  padding-top: 14px;
   display: flex;
   gap: 1px;
+  padding-top: 14px;
 }
 
 .testimonial__card-footer {
   display: grid;
+  grid-template-columns: 41px 1fr 41px;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 41px 1fr 41px;
-  margin-top: 21px;
   width: 100%;
-  /* border: 1px dashed blue; */
+  margin-top: 21px;
 }
 
 .testimonial__client-name {
+  color: var(--color-default);
   font-family: "Roboto", sans-serif;
-  /* font-style: normal; */
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  /* text-align: center; */
-  color: var(--color-default);
   letter-spacing: 0.01em; /* Pixel Perfect */
 }
 
@@ -749,82 +630,67 @@ ol {
 
 .quote {
   opacity: 0.05;
-  /* border: 1px dashed red; */
 }
 
 /************* FEEDBACK *************/
 
 .feedback {
-  margin: 86px auto 0;
-  /* padding-bottom: 500px; */
   display: grid;
   grid-template-columns: 423px 1fr;
   align-items: center;
   gap: 100px;
-  padding: 103px 65px;
-  /* padding-left: 65px; */
-  /* padding-right: 65px; */
   width: 1140px;
   min-height: 346px;
+  margin: 86px auto 0;
+  padding: 103px 65px;
   background-image: url(../images/blue-rectangle.svg);
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: 100% 100%; 
-  /*background-size: contain;*/
-  /* background-size: cover; */
-  /* background-size: 100%; */
-
-  /* object-fit: fill; */
-  /* border: 1px dashed blue; */
 }
 
 .section-title_feedback {
-  text-align: left;
-  line-height: 1.4;
   margin-top: -17px; /* Pixel Perfect */
-  letter-spacing: 0.006em; /* Pixel Perfect */
   color: inherit;
-  /* border: 1px dashed blue; */
+  line-height: 1.4;
+  letter-spacing: 0.006em; /* Pixel Perfect */
+  text-align: left;
 }
 
 .feedback__description {
   color: var(--color-light);
-  /* border: 1px dashed red; */
 }
 
 .description-text_feedback {
   padding-top: 4px;
-  /* padding-bottom: 20px; */
   color: inherit;
 }
 
 .feedback-form__textfield {
+  width: 100%;
   border-color: transparent;
   outline: 1px solid transparent;
-  width: 100%;
+  opacity: 0.4;
+  color: var(--color-default);
   font-family: "Roboto";
-  /* font-style: normal; */
   font-weight: 400;
   font-size: 16px;
   line-height: 254%; /* 41px */
-  color: var(--color-default);
-  opacity: 0.4;
 }
 
 .feedback-form__label {
   display: flex;
   width: 100%;
-  background-color: transparent;
   padding: 15px;
+  background-color: transparent;
 }
 
 .feedback-form__fieldset {
   display: flex;
   height: 70px;
-  background-color: var(--color-light);
   border-color: transparent;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  background-color: var(--color-light);
 }
 
 .feedback-form {
@@ -834,42 +700,41 @@ ol {
 }
 
 .feedback-form__submit-button {
-  background-color: var(--color-accent);
+  border-color: transparent;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--color-light);
   font-family: inherit; /* 'Roboto' 400 */
   font-weight: 500;
   font-size: 18px;
   line-height: 226%;
-  color: var(--color-light);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-color: transparent;
+  background-color: var(--color-accent);
   cursor: pointer;
 }
 
 /************* Footer *************/
 
 .footer {
-  margin: 70px auto 0;
   display: grid;
   grid-template-columns: 1fr 200px 1fr;
   gap: 25px;
-  padding: 59px 180px 105px 179px;
   width: 100%;
   height: 364px;
+  margin: 70px auto 0;
+  padding: 59px 180px 105px 179px;
+  color: #fcf2eb;
   background-image: url(../images/footer-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  color: #fcf2eb;
 }
 
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  padding-top: 66px;
   gap: 34px;
+  padding-top: 66px;
   list-style: none;
-  /* border: 1px solid brown; */
 }
 
 .footer__menu-link {
@@ -884,15 +749,15 @@ ol {
 .footer__social {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__logo {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: center;
+  gap: 5px;
 }
 
 .footer__logo-image {
@@ -903,7 +768,6 @@ ol {
 
 .footer-title {
   font-family: "Roboto";
-  /* font-style: normal; */
   font-weight: 500;
   font-size: 26px;
   line-height: 30px;
@@ -922,11 +786,10 @@ ol {
 }
 
 .email-link {
+  opacity: 0.8;
+  color: var(--color-accent);
   font-family: "Roboto";
-  /* font-style: normal; */
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.01em;
-  color: var(--color-accent);
-  opacity: 0.8;
 }
