@@ -112,7 +112,7 @@ ol {
 }
 
 .menu-link:hover {
-  text-decoration: underline;
+  text-shadow: var(--color-accent) 1px 0 10px;
 }
 
 .header__toolbar-list {
@@ -128,9 +128,9 @@ ol {
 }
 
 .header__toolbar-icon {
-  object-position: center;
   max-width: 23px;
   max-height: 23px;
+  object-position: center;
 }
 
 /************* INTRO *************/
